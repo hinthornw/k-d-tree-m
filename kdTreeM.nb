@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       157,          7]
-NotebookDataLength[     71722,       1381]
-NotebookOptionsPosition[     71214,       1361]
-NotebookOutlinePosition[     71659,       1378]
-CellTagsIndexPosition[     71616,       1375]
+NotebookDataLength[     71765,       1382]
+NotebookOptionsPosition[     71263,       1362]
+NotebookOutlinePosition[     71702,       1379]
+CellTagsIndexPosition[     71659,       1376]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -26,7 +26,7 @@ Cell[BoxData[
     "assignments"}], " ", "*)"}], "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
-    RowBox[{"ClearAll", "[", "\[IndentingNewLine]", 
+    RowBox[{"Clear", "[", "\[IndentingNewLine]", 
      RowBox[{
      "genRandomList", ",", "\[IndentingNewLine]", "buildKDTree", ",", 
       "\[IndentingNewLine]", "getGraphingList", ",", "\[IndentingNewLine]", 
@@ -1222,7 +1222,8 @@ Cell[BoxData[
    3.6167247771248426`*^9}, {3.616724826355707*^9, 3.6167248470259423`*^9}, {
    3.616724884443088*^9, 3.616724914445864*^9}, {3.6167249819397917`*^9, 
    3.6167250099393883`*^9}, {3.6167250489886627`*^9, 3.616725054740995*^9}, {
-   3.6167251101892233`*^9, 3.6167251163375797`*^9}},
+   3.6167251101892233`*^9, 3.6167251163375797`*^9}, {3.6177713314973154`*^9, 
+   3.617771332575537*^9}},
  FontFamily->"Courier New"],
 
 Cell[BoxData[
@@ -1359,8 +1360,8 @@ Cell[BoxData[
    3.616725900958234*^9, 3.616725952480232*^9}]
 }, Open  ]]
 },
-WindowSize->{1200, 1877},
-WindowMargins->{{Automatic, -1208}, {Automatic, -8}},
+WindowSize->{672, 797},
+WindowMargins->{{13, Automatic}, {Automatic, 0}},
 PrivateNotebookOptions->{"VersionedStylesheet"->{"Default.nb"[8.] -> False}},
 ShowSelection->True,
 FrontEndVersion->"10.0 for Microsoft Windows (64-bit) (July 1, 2014)",
@@ -1377,11 +1378,11 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[557, 20, 64715, 1205, 3532, "Input"],
-Cell[65275, 1227, 3534, 84, 292, "Input"],
+Cell[557, 20, 64764, 1206, 3632, "Input"],
+Cell[65324, 1228, 3534, 84, 312, "Input"],
 Cell[CellGroupData[{
-Cell[68834, 1315, 996, 16, 31, "Input"],
-Cell[69833, 1333, 1365, 25, 31, "Output"]
+Cell[68883, 1316, 996, 16, 31, "Input"],
+Cell[69882, 1334, 1365, 25, 52, "Output"]
 }, Open  ]]
 }
 ]

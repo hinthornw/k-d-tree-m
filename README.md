@@ -1,4 +1,4 @@
 k-d-tree-m
 ==========
 
-k-d tree implementation in Mathematica
+This is a very straightforward implementation of the k-d tree algorithm in Mathematica.

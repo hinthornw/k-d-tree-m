@@ -49,7 +49,7 @@ traverseKDTree[cKDT_List, cP_List] := cKDT;
 
 
 (* Distance-square function *)
-distSq := Composition[Total, (#^2&), Subtract];
+distSq := Composition[Total, (#^2 &), Subtract];
 
 
 (* Get the candidate best match *)

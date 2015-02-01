@@ -5,6 +5,7 @@ BeginPackage["KDTree`"]
 
 genRandomList::usage = "genRandomList[d_Integer, nV_Integer, xV_Integer]";
 buildKDTree::usage = "buildKDTree[d_Integer, vL_List]";
+distSq::usage = "distSq[v1_List, v2_List]";
 getBestMatch::usage = "getBestMatch[kDT_List, tV_List]";
 getBestMatchByLinearScanning::usage = "getBestMatchByLinearScanning[vL_List, tV_List]";
 genRandomVec::usage = "genRandomVec[d_Integer, xV_Integer]";

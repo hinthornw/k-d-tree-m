@@ -4,7 +4,7 @@ BeginPackage["KDTree`"]
 
 
 genRandomList::usage = "genRandomList[d_Integer, nV_Integer, xV_Integer]";
-buildKDTree::usage = "buildKDTree[d_Integer, vL_List]";
+buildKDTree::usage = "buildKDTree[d_Integer]";
 distSq::usage = "distSq[v1_List, v2_List]";
 getBestMatch::usage = "getBestMatch[kDT_List, tV_List]";
 getBestMatchByLinearScanning::usage = "getBestMatchByLinearScanning[vL_List, tV_List]";
@@ -37,7 +37,8 @@ buildKDTree[
 		buildKDTree[d + 1, sVL[[(mI + 1);;]]]
 	}
 ];
-buildKDTree[d_Integer, rL_List] := {};
+buildKDTree[d_Integer, vL_List] := {};
+buildKDTree[vL_List] := buildKDTree[1, vL];
 
 
 (* Traverse along a path *)

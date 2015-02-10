@@ -14,12 +14,12 @@ genRandomVec::usage = "genRandomVec[d_Integer, xV_Integer]";
 Begin["`Private`"]
 
 
-(* Generate a random list of n vectors of dimension d *)
+(* Generate a random list of nV vectors of dimension d *)
 genRandomList[
 	d_Integer /; (d > 0),
 	nV_Integer /; (nV > 0),
 	xV_Integer /; (xV > 0)
-] := Table[RandomInteger[xV],{i, 1, nV}, {j, 1, d}];
+] := Table[RandomInteger[xV], {i, 1, nV}, {j, 1, d}];
 genRandomList[d_Integer, nV_Integer, xV_Integer] := {};
 
 

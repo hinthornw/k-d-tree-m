@@ -104,7 +104,7 @@ checkCandBestMatch[
 				checkCandBestMatch[hCBM[[1]], hCBMD, tV, pA[[2;;]], cD - 1],
 				checkCandBestMatch[cBM, cBMD, tV, pA[[2;;]], cD - 1]
 			],
-			checkCandBestMatch[cBM,cBMD,tV,pA[[2;;]],cD-1]
+			checkCandBestMatch[cBM, cBMD, tV, pA[[2;;]], cD - 1]
 		],
 		If[pSDSq < pD,
 			hCBM = getCandBestMatch[pA[[1, If[pSD < 0, 3, 2]]], tV, cD, {}];

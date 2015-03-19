@@ -4,7 +4,7 @@ BeginPackage["KDTree`"]
 
 
 genRandomList::usage = "genRandomList[d_Integer, nV_Integer, xV_Integer]";
-buildKDTree::usage = "buildKDTree[d_Integer]";
+buildKDTree::usage = "buildKDTree[kDT_List]";
 distSq::usage = "distSq[v1_List, v2_List]";
 getBestMatch::usage = "getBestMatch[kDT_List, tV_List]";
 getBestMatchByLinearScanning::usage = "getBestMatchByLinearScanning[vL_List, tV_List]";
@@ -27,14 +27,16 @@ genRandomList[d_Integer, nV_Integer, xV_Integer] := {};
 buildKDTree[
 	d_Integer /; (d > 0),
 	vL_List /; ((vL // Length) > 0)
-] := Module[{cX, sVL, mI},
+] := Module[{cX, sVL, mI, mV, sI},
 	cX = 1 + Mod[d - 1, Length[vL[[1]]]];
 	sVL = Sort[vL, (#1[[cX]] < #2[[cX]] &)];
 	mI = 1 + Floor[Length[sVL] / 2.];
+	mV = sVL[[mI, cX]];
+	sI = First@FirstPosition[sVL, x_ /; (x[[cX]] == mV), 1, {1}, Heads -> False];
 	{
-		sVL[[mI]],
-		buildKDTree[d + 1, sVL[[;;(mI - 1)]]],
-		buildKDTree[d + 1, sVL[[(mI + 1);;]]]
+		sVL[[sI]],
+		buildKDTree[d + 1, sVL[[;;(sI - 1)]]],
+		buildKDTree[d + 1, sVL[[(sI + 1);;]]]
 	}
 ];
 buildKDTree[d_Integer, vL_List] := {};

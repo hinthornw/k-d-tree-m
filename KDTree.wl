@@ -4,7 +4,7 @@ BeginPackage["KDTree`"]
 
 
 genRandomList::usage = "genRandomList[d_Integer, nV_Integer, xV_Integer]";
-buildKDTree::usage = "buildKDTree[kDT_List]";
+build::usage = "build[kDT_List]";
 distSq::usage = "distSq[v1_List, v2_List]";
 getBestMatch::usage = "getBestMatch[kDT_List, tV_List]";
 getBestMatchByLinearScanning::usage = "getBestMatchByLinearScanning[vL_List, tV_List]";
@@ -24,7 +24,7 @@ genRandomList[d_Integer, nV_Integer, xV_Integer] := {};
 
 
 (* Build a k-d tree from a list of vectors *)
-buildKDTree[
+build[
 	d_Integer /; (d > 0),
 	vL_List /; ((vL // Length) > 0)
 ] := Module[{cX, sVL, mI, mV, sI},
@@ -35,12 +35,12 @@ buildKDTree[
 	sI = First@FirstPosition[sVL, x_ /; (x[[cX]] == mV), 1, {1}, Heads -> False];
 	{
 		sVL[[sI]],
-		buildKDTree[d + 1, sVL[[;;(sI - 1)]]],
-		buildKDTree[d + 1, sVL[[(sI + 1);;]]]
+		build[d + 1, sVL[[;;(sI - 1)]]],
+		build[d + 1, sVL[[(sI + 1);;]]]
 	}
 ];
-buildKDTree[d_Integer, vL_List] := {};
-buildKDTree[vL_List] := buildKDTree[1, vL];
+build[d_Integer, vL_List] := {};
+build[vL_List] := build[1, vL];
 
 
 (* Traverse along a path *)

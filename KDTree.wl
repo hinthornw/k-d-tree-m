@@ -124,7 +124,7 @@ checkCandBestMatch[cBM_List, cBMD_Integer, tV_List, pA_List, cD_Integer] := {cBM
 
 
 (* Get the best match *)
-getBestMatch[kDT_List, tV_List] := getCandBestMatch[kDT, tV, 1, {}];
+getBestMatch[kDT_List, tV_List] := Nest[First, getCandBestMatch[kDT, tV, 1, {}], 2];
 
 
 (* Get the best match by scanning linearly *)
